@@ -21,10 +21,10 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-          inputs:
-            containerRegistry: 'asrinub4u-docker-hub'
-            repository: 'asrinub4u/ownimage/azuredevps'
-            command: 'buildAndPush'
-            Dockerfile: '**/Dockerfile'
-            tags: '$(tag)'
+      inputs:
+          containerRegistry: 'asrinub4u-docker-hub'
+          repository: 'asrinub4u/ownimage/azuredevps'
+          command: 'buildAndPush'
+          Dockerfile: '**/Dockerfile'
+          tags: '$(tag)'
       

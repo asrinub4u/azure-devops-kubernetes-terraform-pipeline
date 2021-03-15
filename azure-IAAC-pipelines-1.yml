@@ -21,7 +21,7 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'Azure-resource-service'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'terraform'
-    backendAzureRmStorageAccountName: 'devopsazureasrinub4u'
-    backendAzureRmKey: 'k8sdevops-azure'
+    backendAzureRmStorageAccountName: 'adlasdevops'
+    backendAzureRmContainerName: 'devopstest'
+    backendAzureRmKey: 'testdevops'
     allowTelemetryCollection: true

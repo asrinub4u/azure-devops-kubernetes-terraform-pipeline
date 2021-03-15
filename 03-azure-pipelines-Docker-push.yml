@@ -18,7 +18,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'asrinub4u'
+        containerRegistry: 'asrinub4u-docker-hub'
         repository: 'asrinub4u/azuredevops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'

@@ -13,7 +13,15 @@ steps:
 - script: echo K8S Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+'
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
+    backendType: 'azurerm'
+    backendServiceArm: 'Azure-resource-service'
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'terraform'
+    backendAzureRmStorageAccountName: 'devopsazureasrinub4u'
+    backendAzureRmKey: 'k8sdevops-azure'
+    allowTelemetryCollection: true

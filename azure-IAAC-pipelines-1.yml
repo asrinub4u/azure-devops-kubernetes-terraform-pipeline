@@ -17,10 +17,11 @@ steps:
 - task: TerraformCLI@0
   inputs:
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
     backendType: 'azurerm'
     backendServiceArm: 'Azure-resource-service'
     ensureBackend: true
+    backendAzureRmResourceGroupName: 'terraform-k8s'
+    backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'adlasdevops'
     backendAzureRmContainerName: 'devopstest'
     backendAzureRmKey: 'testdevops'

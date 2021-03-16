@@ -22,7 +22,7 @@ steps:
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-resource-group'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'storageaccountIAACK8S'
-    backendAzureRmContainerName: 'storageaccountIAACK8S'
+    backendAzureRmStorageAccountName: 'storageacctasrinub4uxyz'
+    backendAzureRmContainerName: 'storagecontainer'
     backendAzureRmKey: 'k8s-iaac-dev.tfstate'
 

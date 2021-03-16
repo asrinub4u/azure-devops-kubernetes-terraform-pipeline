@@ -23,6 +23,6 @@ steps:
     backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'storageaccountIAACK8S'
     backendAzureRmContainerName: 'storageaccountIAACK8S'
-    backendAzureRmKey: 'K8S-IAAC-DEV'
+    backendAzureRmKey: 'k8s-iaac-dev.tfstate'
     allowTelemetryCollection: true
 

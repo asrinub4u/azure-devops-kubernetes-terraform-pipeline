@@ -25,5 +25,4 @@ steps:
     backendAzureRmStorageAccountName: 'storageaccountIAACK8S'
     backendAzureRmContainerName: 'storageaccountIAACK8S'
     backendAzureRmKey: 'k8s-iaac-dev.tfstate'
-    allowTelemetryCollection: true
 

@@ -16,13 +16,12 @@ steps:
   inputs:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-    commandOptions: '-var client_id = $(client_id) -var client_secret =$(client_secret) -var ssh_public_key= $(publickey.secureFilePath)'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
     backendType: 'azurerm'
     backendServiceArm: 'azure-service-manager-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'terraform-backend-resource-group'
+    backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'storageacctasrinub4uxyz'
-    backendAzureRmContainerName: 'storagecontainer'
-    backendAzureRmKey: 'k8s-iaac-dev.tfstate'
-
+    backendAzureRmStorageAccountName: 'storageacctranxyz'
+    backendAzureRmContainerName: 'storageacctrancontainer'
+    backendAzureRmKey: 'kubernetes-dev.tfstate'

@@ -10,10 +10,19 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
+- script: echo K8S Hello, world!
   displayName: 'Run a one-line script'
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
+    commandOptions: '-var client_id = $(client_id) -var client_secret =$(client_secret) -var ssh_public_key= $(ssh_public_key)'
+    backendType: 'azurerm'
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'terraform-backend-resource-group'
+    backendAzureRmResourceGroupLocation: 'westeurope'
+    backendAzureRmStorageAccountName: 'storageaccountIAACK8S'
+    backendAzureRmContainerName: 'storageaccountIAACK8S'
+    backendAzureRmKey: 'K8S-IAAC-DEV'
+    allowTelemetryCollection: true
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
